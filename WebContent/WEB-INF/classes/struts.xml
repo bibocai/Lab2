@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="helloworld" extends="struts-default">     
+      <action name="hello" 
+            class="com.tutorialspoint.struts2.HelloWorldAction" 
+            method="execute">
+            <result name="success">/HelloWorld_page1.jsp</result>
+      </action>   
+      
+      <action name="search" 
+            class="com.tutorialspoint.struts2.Search_java" 
+            method="execute">
+            <result name="success_1">/Search.jsp</result>
+      </action> 
+
+      <action name="insert_a_book" 
+            class="com.tutorialspoint.struts2.Insert_java" 
+            method="execute">
+            <result name="success">/insert_done.jsp</result>
+            <result name="i_want_an_author">/insert_author_jsp.jsp</result>
+            <result name="failed">/book_insert_failed_jsp.jsp</result>
+      </action> 
+
+      <action name="edit_java" 
+            class="com.tutorialspoint.struts2.edit_java" 
+            method="execute">
+            <result name="success">/edit_done.jsp</result>
+            <result name="failed">/insert_author_jsp.jsp</result>
+      </action> 
+      
+      <action name="book_detail_edit" 
+            class="com.tutorialspoint.struts2.book_detail_edit" 
+            method="execute">
+            <result name="success">/edit_jsp.jsp</result>
+      </action> 
+
+
+      <action name="insert_a_author" 
+            class="com.tutorialspoint.struts2.insert_author" 
+            method="execute">
+            <result name="success">/insert_done.jsp</result>
+            <result name="failed">/author_insert_failed_jsp.jsp</result>
+      </action> 
+      
+      <action name="delete_java" 
+            class="com.tutorialspoint.struts2.delete_java" 
+            method="execute">
+            <result name="success">/delete_done.jsp</result>
+      </action> 
+      
+      <action name="detail_java" 
+            class="com.tutorialspoint.struts2.detail_java" 
+            method="execute">
+            <result name="success_1">/detail_jsp.jsp</result>
+      </action> 
+   </package> 
+</struts>
